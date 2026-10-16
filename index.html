@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو سيكس سيفن بيتزا</title>
+    <!-- استدعاء خطوط جوجل للغة العربية -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #f3ca20; /* اللون الأصفر من الشعار */
+            --secondary-color: #ff3333; /* اللون الأحمر من الشعار */
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #ffffff;
+            --text-muted: #aaaaaa;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            padding-bottom: 50px;
+        }
+
+        /* تصميم الرأس (الهيدر) */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, rgba(18,18,18,0.9), rgba(18,18,18,0.9)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80') center/cover;
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        .logo-container {
+            display: inline-block;
+            background-color: #000;
+            border-radius: 50%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid var(--primary-color);
+        }
+
+        /* رسم مبسط لشعار 67 باستخدام CSS */
+        .logo-text {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            line-height: 1;
+            position: relative;
+        }
+        .logo-text span {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            position: absolute;
+            bottom: -5px;
+            right: -20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: #fff;
+        }
+
+        .slogan {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* معلومات التواصل */
+        .contact-info {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px auto 0;
+            max-width: 400px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 1.1rem;
+        }
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* أزرار التصنيفات */
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+            overflow-x: auto;
+            white-space: nowrap;
+            /* دعم السحب باللمس */
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .category-btn {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--text-color);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-family: 'Cairo', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-btn.active, .category-btn:hover {
+            background-color: var(--primary-color);
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* شبكة عرض المنيو */
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* تصميم بطاقة الوجبة */
+        .menu-item {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 15px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            border-right: 4px solid var(--secondary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .item-details h3 {
+            margin: 0 0 5px 0;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .item-details p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .item-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #000;
+            background-color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 8px;
+            white-space: nowrap;
+            margin-right: 15px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo-text">67<span>Pizza</span></div>
+        </div>
+        <h1>مطعم سيكس سيفن</h1>
+        <p class="slogan">#بداية_بطعم_قوي</p>
+        
+        <div class="contact-info">
+            <p>📞 للطلب: <a href="tel:0918291919">091 829 1919</a> - <a href="tel:0924881835">092 488 1835</a></p>
+            <p>📘 فيسبوك: Pizza Six Seven</p>
+        </div>
+    </header>
+
+    <!-- أزرار التصنيفات -->
+    <div class="categories" id="category-buttons">
+        <!-- سيتم إضافة الأزرار برمجياً -->
+    </div>
+
+    <!-- مكان عرض الوجبات -->
+    <div class="menu-container" id="menu-container">
+        <!-- سيتم إضافة الوجبات برمجياً -->
+    </div>
+
+    <script>
+        // ==========================================
+        // بيانات المنيو كاملة حسب الصورة
+        // ==========================================
+        const menuData = [
+            // الشاورما
+            { name: "شاورما دجاج عادية", desc: "", price: "10", category: "شاورما" },
+            { name: "شاورما دجاج بالجبنة", desc: "", price: "11", category: "شاورما" },
+            { name: "شاورما دبل فطيرة", desc: "", price: "12", category: "شاورما" },
+            { name: "شاورما دبل جبنة", desc: "", price: "13", category: "شاورما" },
+            { name: "شاورما اكسترا", desc: "", price: "16", category: "شاورما" },
+            { name: "شاورما عربي", desc: "", price: "16", category: "شاورما" },
+            { name: "بوكس شاورما صغير", desc: "", price: "25", category: "شاورما" },
+            { name: "بوكس شاورما متوسط", desc: "", price: "35", category: "شاورما" },
+            { name: "بوكس شاورما كبير", desc: "", price: "90", category: "شاورما" },
+            { name: "شاورما فرايز", desc: "", price: "18", category: "شاورما" },
+            
+            // وجبات شاورما
+            { name: "وجبة شاورما صغيرة", desc: "", price: "25", category: "وجبات شاورما" },
+            { name: "وجبة شاورما كبيرة", desc: "", price: "35", category: "وجبات شاورما" },
+
+            // برجر
+            { name: "برجر دجاج", desc: "", price: "10", category: "برجر" },
+            { name: "برجر دجاج جامبو", desc: "", price: "15", category: "برجر" },
+            { name: "برجر لحم", desc: "", price: "13", category: "برجر" },
+            { name: "برجر لحم جامبو", desc: "", price: "18", category: "برجر" },
+            { name: "برجر فرن دجاج", desc: "", price: "15", category: "برجر" },
+            { name: "برجر فرن لحم", desc: "", price: "18", category: "برجر" },
+            { name: "تشيز برجر لحم", desc: "", price: "18", category: "برجر" },
+
+            // وجبات مشاوي
+            { name: "نص دجاج مشوي", desc: "", price: "25", category: "وجبات مشاوي" },
+            { name: "دجاجة مشوية كاملة", desc: "", price: "47", category: "وجبات مشاوي" },
+            { name: "كباب لحم 2 اسياخ", desc: "", price: "24", category: "وجبات مشاوي" },
+            { name: "كباب لحم 3 اسياخ", desc: "", price: "30", category: "وجبات مشاوي" },
+            { name: "شيش طاووق 2 اسياخ", desc: "", price: "22", category: "وجبات مشاوي" },
+            { name: "شيش طاووق 3 اسياخ", desc: "", price: "27", category: "وجبات مشاوي" },
+            { name: "شرائح صدر دجاج 2", desc: "", price: "22", category: "وجبات مشاوي" },
+            { name: "شرائح دجاج تريبل", desc: "", price: "27", category: "وجبات مشاوي" },
+            { name: "كبدة 2 اسياخ", desc: "", price: "34", category: "وجبات مشاوي" },
+            { name: "كبدة 3 اسياخ", desc: "", price: "47", category: "وجبات مشاوي" },
+            { name: "جناوح 2 اسياخ", desc: "", price: "22", category: "وجبات مشاوي" },
+            { name: "جناوح تريبل", desc: "", price: "27", category: "وجبات مشاوي" },
+            { name: "وجبة مشكلة 5 اسياخ", desc: "", price: "97", category: "وجبات مشاوي" },
+            { name: "وجبة مشكلة 8 اسياخ", desc: "", price: "100", category: "وجبات مشاوي" },
+            { name: "وجبة مشكلة 10 اسياخ", desc: "", price: "125", category: "وجبات مشاوي" },
+            { name: "وجبة 67 مشكلة 15 سيخ", desc: "", price: "200", category: "وجبات مشاوي" },
+
+            // بيتزا
+            { name: "مارينارا", desc: "(صلصة - ريحان - زيتون)", price: "18", category: "بيتزا" },
+            { name: "مارغاريتا", desc: "(صلصة - جبنة - بارميجانو - باستو)", price: "20", category: "بيتزا" },
+            { name: "الصياد", desc: "(صلصة - موزريلا - تن - فلفل - زيتون)", price: "22", category: "بيتزا" },
+            { name: "فونقي", desc: "(صلصة - موزريلا - فونقي - خضروات)", price: "20", category: "بيتزا" },
+            { name: "بيبيروني", desc: "(صلصة - موزريلا - بيبيروني)", price: "22", category: "بيتزا" },
+            { name: "كارنيفرو", desc: "(صلصة - موزريلا - لحم مفروم)", price: "25", category: "بيتزا" },
+            { name: "كباب", desc: "(صلصة - موزريلا - كباب - بصل مكرمل)", price: "25", category: "بيتزا" },
+            { name: "الاجبان الاربعة", desc: "(صلصة - اربعة انواع جبنة)", price: "24", category: "بيتزا" },
+            { name: "اربعة مواسم", desc: "(تن - دجاج - فقاع - خضرة)", price: "22", category: "بيتزا" },
+            { name: "مكسيكانو", desc: "(دجاج - موزريلا - خضرة)", price: "25", category: "بيتزا" },
+            { name: "فجيرتيان", desc: "(خضروات) (صلصة - موزريلا - خضرة)", price: "21", category: "بيتزا" },
+            { name: "بيتزا 67", desc: "(موزريلا - جبنة شرائح - دجاج - فقاع - خضرة)", price: "27", category: "بيتزا" },
+
+            // مقلوبة
+            { name: "مقلوبة دجاج", desc: "", price: "17", category: "مقلوبة" },
+            { name: "مقلوبة كبدة", desc: "", price: "22", category: "مقلوبة" },
+            { name: "مقلوبة مفروم", desc: "", price: "20", category: "مقلوبة" },
+            { name: "مقلوبة كباب", desc: "", price: "20", category: "مقلوبة" },
+
+            // باقيت
+            { name: "باقيت دجاج", desc: "", price: "20", category: "باقيت" },
+            { name: "باقيت كباب", desc: "", price: "26", category: "باقيت" },
+            { name: "باقيت كبدة", desc: "", price: "26", category: "باقيت" },
+
+            // كلازوني
+            { name: "كلازوني دجاج", desc: "", price: "25", category: "كلازوني" },
+            { name: "كلازوني كباب", desc: "", price: "28", category: "كلازوني" },
+            { name: "كلازوني كبدة", desc: "", price: "30", category: "كلازوني" },
+            { name: "انشيلادا", desc: "", price: "23", category: "كلازوني" },
+            { name: "مشتعلة", desc: "", price: "20", category: "كلازوني" },
+
+            // سكالوب
+            { name: "سكالوب دجاج مشوي فطيرة", desc: "", price: "15", category: "سكالوب" },
+            { name: "سكالوب دجاج مشوي خبزة", desc: "", price: "17", category: "سكالوب" },
+            { name: "سكالوب دجاج مقلي فطيرة", desc: "", price: "15", category: "سكالوب" },
+            { name: "سكالوب دجاج مقلي خبزة", desc: "", price: "17", category: "سكالوب" },
+
+            // فاهيتا و طابونة
+            { name: "فاهيتا دجاج", desc: "", price: "17", category: "فاهيتا و طابونة" },
+            { name: "فاهيتا لحم", desc: "", price: "20", category: "فاهيتا و طابونة" },
+            { name: "طابونة فرن", desc: "", price: "16", category: "فاهيتا و طابونة" },
+            { name: "طابونة دجاج", desc: "", price: "15", category: "فاهيتا و طابونة" },
+            { name: "طابونة كباب", desc: "", price: "18", category: "فاهيتا و طابونة" },
+            { name: "طابونة كبدة", desc: "", price: "20", category: "فاهيتا و طابونة" },
+
+            // كباب لفائف
+            { name: "كباب لحم فطيرة", desc: "", price: "11", category: "كباب و لفائف" },
+            { name: "كباب دبل فطيرة", desc: "", price: "14", category: "كباب و لفائف" },
+            { name: "لفايف دجاج", desc: "", price: "16", category: "كباب و لفائف" },
+            { name: "لفايف لحم", desc: "", price: "18", category: "كباب و لفائف" },
+
+            // مشروبات
+            { name: "مشروب علبة", desc: "", price: "3.5", category: "مشروبات" },
+            { name: "مشروب لتر", desc: "", price: "5", category: "مشروبات" },
+            { name: "كركديه", desc: "", price: "4", category: "مشروبات" },
+            { name: "مياه", desc: "", price: "1", category: "مشروبات" }
+        ];
+
+        // ترتيب التصنيفات
+        const categories = ["الكل", "شاورما", "برجر", "بيتزا", "وجبات مشاوي", "مقلوبة", "سكالوب", "باقيت", "كلازوني", "فاهيتا و طابونة", "كباب و لفائف", "وجبات شاورما", "مشروبات"];
+        const categoryContainer = document.getElementById('category-buttons');
+        const menuContainer = document.getElementById('menu-container');
+
+        // إنشاء أزرار التصنيفات
+        categories.forEach((cat, index) => {
+            const btn = document.createElement('button');
+            btn.className = `category-btn ${index === 0 ? 'active' : ''}`;
+            btn.innerText = cat;
+            btn.onclick = () => filterMenu(cat, btn);
+            categoryContainer.appendChild(btn);
+        });
+
+        // دالة عرض المنيو
+        function displayMenu(items) {
+            menuContainer.innerHTML = '';
+            items.forEach(item => {
+                const menuItem = document.createElement('div');
+                menuItem.className = 'menu-item';
+                
+                // إظهار الوصف (المكونات) فقط إذا كان موجوداً
+                const descHtml = item.desc ? `<p>${item.desc}</p>` : '';
+                
+                menuItem.innerHTML = `
+                    <div class="item-details">
+                        <h3>${item.name}</h3>
+                        ${descHtml}
+                    </div>
+                    <div class="item-price">${item.price} د.ل</div>
+                `;
+                menuContainer.appendChild(menuItem);
+            });
+        }
+
+        // دالة الفلترة
+        function filterMenu(category, clickedBtn) {
+            document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+            clickedBtn.classList.add('active');
+
+            if (category === "الكل") {
+                displayMenu(menuData);
+            } else {
+                const filtered = menuData.filter(item => item.category === category);
+                displayMenu(filtered);
+            }
+        }
+
+        // عرض كل الوجبات في البداية
+        displayMenu(menuData);
+    </script>
+</body>
+</html>
